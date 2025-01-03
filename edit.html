@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editing</title>
+    <link href = "photoshop.css" rel = "stylesheet">
+    <script src="back.js"></script>
+</head>
+<body>
+    <div class = "container">
+        <h1>Edit the image of your interest</h1>
+        <div class = "wrapper">
+            <div class = "preview-img">
+                <img src = "image-placeholder.png">
+            </div>
+            <div class = "controls">
+                <div class = "row">
+                    <input type ="file" class = "file-input" accept="image/*" hidden>  
+                    <button class="choose-img">CHOOSE IMAGE</button>
+                    <button class="save-img">SAVE IMAGE</button>
+                </div>
+            </div>
+              <div class = "panel">
+                <div class = "filter">
+                    <label class = "title">Filters</label>
+                    <button id = "brightness" class = "active">Brightness</button>
+                    <button id = "saturation">Saturation</button>
+                    <button id = "grayscale">Grayscale</button>
+                    <button id = "inversion">Inversion</button>
+                    <button id = "hue">Hue</button>
+                    <button id = "sepia">Sepia</button>
+                    <button id = "contrast">Contrast</button>
+                    <button id = "blur">Blur</button>
+                    <button id = "opacity">Opacity</button>
+                    
+                    <div class = "slider">
+                        <div class = "filter-info">
+                            <p class = "name"> Brightness</p>
+                            <p class = "value">100%</p>
+                        </div>  
+                        <input type = "range" value = "100" min = "0" max = "200">
+                    </div>
+                </div>
+
+                <div class="rotate">
+                    <button id = "left" title="Rotate Left">
+                        <i class="fa-solid fa-rotate-left">Rotate Left</i>
+                    </button>
+                    <button id="vertical" title="Flip Vertically">
+                        <i class="bx bx-reflect-vertical">Rotate Vertically</i>
+                    </button>
+                    <button id="horizontal" title="Flip Horizontally">
+                        <i class="bx bx-reflect-horizontal">Rotate Horizontally</i> 
+                    </button>
+                </div>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

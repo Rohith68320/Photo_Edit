@@ -1,0 +1,201 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height : 100vh;
+    background:aliceblue;
+}
+
+.container
+{
+    width:850px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    padding : 30px 35px 35px;
+    box-shadow: 0 10px 20px #001;
+}
+
+.container .wrapper 
+{
+    margin: 20px 0;
+    min-height: 335px;
+    justify-items: center;
+}
+
+.wrapper .panel 
+{
+    width: 600px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .preview-img
+{
+    width: 450px; 
+    height: 450px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.panel .title
+{
+    display: block;
+    font-size: 20px;
+    font-weight: 1000;
+    margin-bottom: 12px;
+}
+
+.panel button
+{
+    height: 40px;
+    font-size: 14px;
+    color: #414141;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    background: #fff;
+    border: 1px solid #bbb;
+}
+
+.panel button:hover
+{
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.panel .filter button
+{
+    width:calc(100%/2 - 4px);   
+}
+
+.filter button.active
+{
+    color : #fff;
+    background: #5327f0;
+    border-color: #5327f0;
+}
+
+.panel .filter button
+{
+    width:calc(100%/4 - 3px);   
+}
+
+.filter .slider
+{
+    margin-top: 12px;
+}
+.filter .slider .filter-info
+{
+    display: flex;
+    color: #464646;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.filter .slider input
+{
+    width: 100%;
+    height: 5px;
+    accent-color: #5327f0;
+}
+
+.filter .slider .name
+{
+    font-weight: bold;
+    font-size: medium;
+}
+
+.rotate 
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.rotate button 
+{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotate button:hover 
+{
+    background: #f5f5f5;
+}
+
+.rotate button[title]::after 
+{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.1s, transform 0.1s;
+}
+
+.rotate button:hover[title]::after 
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.rotate button i 
+{
+    font-size: 8px;
+}
+
+.preview-img img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform-origin: center; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.controls button
+{
+    font-size: 14px;
+    cursor : pointer;
+    color : #fff;
+    padding: 11px 20px;
+    border-radius: 3px;
+}
+
+.controls .row
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.controls .choose-img
+{
+    background : grey;
+    border: 1px solid #6c757d;
+}
+.controls .save-img
+{
+    margin-left: 5px;
+    background : blue;
+    border: 1px solid blue;
+}
